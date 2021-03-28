@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CoffeesModule } from './coffees/coffees.module';
+import { CommonModule } from './common/common.module';
 import appConfig from './config/app.config';
 
 @Module({
@@ -24,6 +25,7 @@ import appConfig from './config/app.config';
       load: [appConfig],
     }),
     CoffeesModule,
+    CommonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
