@@ -10,7 +10,7 @@ import { Flavor } from './entities/flavor.entity';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Coffee, Flavor, Event]),
+    TypeOrmModule.forFeature([Coffee, Flavor]),
     ConfigModule.forFeature(coffeesConfig),
   ],
   controllers: [CoffeesController],

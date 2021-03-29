@@ -19,13 +19,9 @@ import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 export class CoffeesController {
   constructor(private readonly coffeesService: CoffeesService) {}
 
-  @Public()
   @Get()
-  findAll(
-    @Protocol('https') protocol: string,
-    @Query() paginationQuery: PaginationQueryDto,
-  ) {
-    return this.coffeesService.findAll(paginationQuery);
+  findAll() {
+    return this.coffeesService.findAll();
   }
 
   @Get(':id')
